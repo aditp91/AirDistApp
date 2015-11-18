@@ -1,0 +1,35 @@
+<template name="AirportPage">
+	<div class="page-container container">
+		<div class="row">
+			<div class="col-md-12" id="content">
+				<div class="row" id="title_row">
+					<div class="col-md-12">
+						<div id="page_menu" class="pull-right">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div id="menu" class="col-sm-3 col-md-2">
+				<h2>
+				</h2>
+				{{> AirportPageSideMenu}}
+			</div>
+			<div id="subcontent" class="col-sm-9 col-md-10">
+				{{> yield region='AirportPageSubcontent'}}
+			</div>
+		</div>
+	</div>
+</template>
+
+<template name="AirportPageSideMenu">
+	<ul id="menu-items" class="nav nav-pills nav-stacked">
+		<li id="menu-item-simple" class="{{menuItemClass 'airport_page.distances'}}">
+			<a href="{{pathFor 'airport_page.distances'}}">
+				Distances
+			</a>
+		</li>
+	</ul>
+</template>
+

@@ -1,0 +1,38 @@
+<template name="AirportPageDistances">
+	<div class="page-container container" id="content">
+		<div class="row" id="title_row">
+			<div class="col-md-12">
+				<h2 id="page_title" class="pull-left">
+					Distances
+				</h2>
+				<div id="page_menu" class="pull-right">
+				</div>
+			</div>
+		</div>
+		{{> AirportPageDistancesDistancesPage}}
+	</div>
+    <div id="airports-controls-forms">
+            <div id="airports-controls-forms-group" class="form-group">
+
+                <input type="text" class="form-control typeahead" id="airports-departuresearch-input"
+                       data-source="airport_typeahead" autocomplete="on" spellcheck="on"
+					   placeholder="Departure Airport" name="search" value="{{searchString}}" autofocus="autofocus"/>
+
+                <input type="text" class="form-control typeahead" id="airports-arrivalsearch-input"
+                       data-source="airport_typeahead" autocomplete="on" spellcheck="on"
+					   placeholder="Arrival Airport" name="search" value="{{searchString}}" autofocus="autofocus"/>
+
+                <button type="button" id="airports-distance-button" class="btn btn-primary">
+						<span class="fa fa">
+							Calculate Distance
+						</span>
+                </button>
+				<label id="airports-distance-result" class="s"></label>
+            </div>
+    </div>
+</template>
+
+<template name="AirportPageDistancesDistancesPage">
+	{{#markdown}}{{/markdown}}
+</template>
+
